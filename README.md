@@ -56,7 +56,7 @@ SkyCast Weather offers a clean user interface with smooth animations, responsive
 
 <div align="center">
 
-<img src="https://media.giphy.com/media/3o7TKtnuHOHHUjR38Y/giphy.gif" width="750"/>
+<img src="SkyCast Photo.jpeg" width="750"/>
 
 </div>
 
