@@ -231,7 +231,7 @@ This project is perfect for:
 
 <div align="center">
 
-<img src="https://user-images.githubusercontent.com/74038190/212750113-df5f15f3-1f32-45e2-a7f5-6dff5eb1d5cc.gif" width="700"/>
+<img src="SkyCast Photo1.jpeg" width="700"/>
 
 </div>
 
