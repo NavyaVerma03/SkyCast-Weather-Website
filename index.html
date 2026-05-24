@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+  content="width=device-width, initial-scale=1.0">
+
+  <title>SkyCast Weather ⛅</title>
+
+  <link rel="stylesheet"
+  href="style.css">
+
+  <link rel="preconnect"
+  href="https://fonts.googleapis.com">
+
+  <link rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin>
+
+  <link href=
+  "https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+  rel="stylesheet">
+
+</head>
+<body>
+
+  <div class="overlay"></div>
+
+  <div class="rain"></div>
+
+  <div class="container">
+
+    <h1> SkyCast Weather⛅</h1>
+
+    <div class="search-box">
+
+      <input
+      type="text"
+      id="city"
+      placeholder="Search city...">
+
+      <button onclick="getWeather()">
+        🔍
+      </button>
+
+      <button onclick="getLocationWeather()">
+        📍
+      </button>
+
+    </div>
+
+    <div class="weather-card">
+
+      <h2 id="cityName">
+        City Name
+      </h2>
+
+      <p id="dateTime">
+        Date & Time
+      </p>
+
+      <img
+      id="weatherIcon"
+      src=""
+      alt="">
+
+      <h1 id="temp">
+        --°C
+      </h1>
+
+      <p id="condition">
+        Weather Condition
+      </p>
+
+      <div class="extra-details">
+
+        <div class="mini-box">
+          <h3>🔥 Feels Like</h3>
+          <span id="feelsLike">--°C</span>
+        </div>
+
+        <div class="mini-box">
+          <h3>👀 Visibility</h3>
+          <span id="visibility">-- km</span>
+        </div>
+
+      </div>
+
+      <div class="details">
+
+        <div class="box">
+
+          <h3>💧Humidity</h3>
+
+          <p id="humidity">
+            --%
+          </p>
+
+        </div>
+
+        <div class="box">
+
+          <h3> 🍃 Wind</h3>
+
+          <p id="wind">
+            -- km/h
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <footer class="footer">
+  <p>SkyCast • Developed by Navya Verma ❤️</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
+
+
