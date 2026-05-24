@@ -1,73 +1,50 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:38bdf8,50:6366f1,100:f472b6&height=260&section=header&text=🌦️%20SkyCast%20Weather&fontSize=55&fontColor=ffffff&animation=twinkling&fontAlignY=40"/>
+# 🌦️ SkyCast Weather
 
-<br>
+### ✨ Elegant • Modern • Animated Weather App ✨
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&weight=600&size=28&pause=1000&color=38BDF8&center=true&vCenter=true&width=850&lines=🌍+Live+Weather+Updates;⚡+Modern+Animated+UI;☁️+Beautiful+Glassmorphism+Design;📱+Responsive+Weather+Application;💻+Built+Using+HTML+CSS+JavaScript;❤️+Crafted+By+Navya+Verma"/>
+<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=26&pause=1000&color=38BDF8&center=true&vCenter=true&width=750&lines=🌍+Live+Weather+Updates;☁️+Beautiful+Animated+UI;⚡+Fast+and+Responsive+Design;💻+Built+with+HTML+CSS+JavaScript;❤️+Made+by+Navya+Verma" />
 
 <br><br>
 
-<img src="https://img.shields.io/github/stars/YOURUSERNAME/skycast-weather?style=for-the-badge&logo=github&color=38bdf8">
+<img src="https://img.shields.io/badge/HTML5-orange?style=for-the-badge&logo=html5">
 
-<img src="https://img.shields.io/github/forks/YOURUSERNAME/skycast-weather?style=for-the-badge&logo=github&color=6366f1">
+<img src="https://img.shields.io/badge/CSS3-blue?style=for-the-badge&logo=css3">
 
-<img src="https://img.shields.io/github/license/YOURUSERNAME/skycast-weather?style=for-the-badge&color=f472b6">
+<img src="https://img.shields.io/badge/JavaScript-yellow?style=for-the-badge&logo=javascript">
+
+<img src="https://img.shields.io/badge/Weather_API-38bdf8?style=for-the-badge">
 
 <img src="https://img.shields.io/badge/Status-Live-success?style=for-the-badge">
-
-<br><br>
-
-<img src="https://komarev.com/ghpvc/?username=YOURUSERNAME&label=Profile%20Views&color=38bdf8&style=for-the-badge"/>
 
 </div>
 
 ---
 
-# 🌈 About SkyCast
+# ☁️ About SkyCast
 
-SkyCast is a modern and interactive weather web application that provides live weather updates with beautiful animations and premium UI design.
+SkyCast is a stylish and modern weather web application that shows live weather information with smooth animations and a premium user interface.
 
-✨ Built using:
+This project is created using:
 
-- 🌐 HTML5
-- 🎨 CSS3
-- ⚡ JavaScript
-- ☁️ Weather API
-- 🧠 DOM Manipulation
+✨ HTML5  
+🎨 CSS3  
+⚡ JavaScript  
+☁️ Weather API  
+🧠 DOM Manipulation  
 
 ---
 
 # 🚀 Features
 
-<div align="center">
-
-| 🌟 Feature | 🚀 Description |
-|---|---|
-| 🌍 Live Weather | Real-time weather updates |
-| 🔍 Smart Search | Search any city instantly |
-| ☁️ Dynamic Background | Weather-based UI |
-| 🌧️ Rain Animation | Smooth visual effects |
-| 📱 Responsive Design | Mobile + Desktop Friendly |
-| ⚡ Fast Performance | Smooth user experience |
-| 🎨 Premium UI | Modern Glassmorphism |
-| 🌙 Dark Theme | Elegant weather feel |
-
-</div>
-
----
-
-# 📸 Preview
-
-<div align="center">
-
-<img width="850" src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif">
-
-<br><br>
-
-<img width="850" src="https://media.giphy.com/media/l0HlNaQ6gWfllcjDO/giphy.gif">
-
-</div>
+🌍 Real-Time Weather Updates  
+🔍 Search Any City  
+🌧️ Dynamic Rain Effects  
+☁️ Animated Weather Backgrounds  
+📱 Fully Responsive Design  
+⚡ Fast & Smooth Performance  
+🎨 Modern Glassmorphism UI  
 
 ---
 
@@ -75,13 +52,13 @@ SkyCast is a modern and interactive weather web application that provides live w
 
 <div align="center">
 
-<img src="https://skillicons.dev/icons?i=html,css,javascript,vscode,github,git" />
+<img src="https://skillicons.dev/icons?i=html,css,javascript,vscode,github" />
 
 </div>
 
 ---
 
-# 📂 Project Structure
+# 📂 Folder Structure
 
 ```bash
 SkyCast-Weather/
@@ -97,23 +74,19 @@ SkyCast-Weather/
 
 # ⚙️ Installation
 
-## 📥 Clone Repository
+### 📥 Clone Repository
 
 ```bash
 git clone https://github.com/YOURUSERNAME/skycast-weather.git
 ```
 
----
-
-## 📂 Open Folder
+### 📂 Open Folder
 
 ```bash
 cd skycast-weather
 ```
 
----
-
-## ▶️ Run Project
+### ▶️ Run Project
 
 ```bash
 open index.html
@@ -121,52 +94,19 @@ open index.html
 
 ---
 
+# 📸 Preview
+
+<div align="center">
+
+<img width="850" src="https://media.giphy.com/media/xT0xeJpnrWC4XWblEk/giphy.gif">
+
+</div>
+
+---
+
 # 🌐 Live Demo
 
-<div align="center">
-
-<a href="#">
-<img src="https://img.shields.io/badge/🚀_LIVE_DEMO-38bdf8?style=for-the-badge"/>
-</a>
-
-</div>
-
----
-
-# 📊 GitHub Stats
-
-<div align="center">
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=YOURUSERNAME&show_icons=true&theme=tokyonight"/>
-
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOURUSERNAME&layout=compact&theme=tokyonight"/>
-
-<br><br>
-
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=YOURUSERNAME&theme=tokyonight"/>
-
-</div>
-
----
-
-# 🐍 Contribution Snake
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake.svg">
-
-</div>
-
----
-
-# 💖 Support
-
-If you like this project:
-
-⭐ Star the Repository  
-🍴 Fork the Project  
-💬 Share with Friends  
-🚀 Follow for More Projects  
+🚀 Coming Soon...
 
 ---
 
@@ -176,43 +116,29 @@ If you like this project:
 
 # ❤️ Navya Verma
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=24&pause=1000&color=F472B6&center=true&vCenter=true&width=700&lines=Frontend+Developer+✨;Creative+UI+Designer+🎨;Building+Beautiful+Experiences+💖"/>
+### “Weather Meets Elegance”
 
-<br>
-
-### 🌈 “Weather Meets Elegance”
+<img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=22&pause=1000&color=F472B6&center=true&vCenter=true&width=600&lines=Frontend+Developer+✨;Creative+UI+Designer+🎨;Building+Beautiful+Experiences+💖"/>
 
 </div>
 
 ---
 
-# 📬 Connect With Me
+# ⭐ Support
 
-<div align="center">
+If you like this project:
 
-<a href="https://github.com/YOURUSERNAME">
-<img src="https://skillicons.dev/icons?i=github" />
-</a>
-
-<a href="#">
-<img src="https://skillicons.dev/icons?i=instagram" />
-</a>
-
-<a href="#">
-<img src="https://skillicons.dev/icons?i=twitter" />
-</a>
-
-</div>
+⭐ Star the Repository  
+🍴 Fork the Project  
+💬 Share with Friends  
 
 ---
 
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:f472b6,50:6366f1,100:38bdf8&height=180&section=footer&animation=twinkling"/>
+### 🌈 Made with ❤️ by Navya Verma
 
-# 🌦️ SkyCast Weather
-
-### Made with ❤️ by Navya Verma
+</div>
 
 <img src="https://readme-typing-svg.herokuapp.com?font=Poppins&size=22&pause=1000&color=38BDF8&center=true&vCenter=true&width=650&lines=Thanks+For+Visiting+✨;Keep+Coding+🚀;Stay+Creative+🎨"/>
 
