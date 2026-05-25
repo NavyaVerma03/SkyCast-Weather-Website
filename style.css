@@ -213,14 +213,20 @@ body::before{
 
   display:flex;
 
+  align-items:center;
+
   gap:8px;
 
   margin-bottom:18px;
+
+  width:100%;
 }
 
 .search-box input{
 
   flex:1;
+
+  width:100%;
 
   min-width:0;
 
@@ -247,9 +253,11 @@ body::before{
 
 .search-box button{
 
-  width:48px;
+  width:45px;
 
-  height:48px;
+  height:45px;
+
+  min-width:45px;
 
   border:none;
 
@@ -257,7 +265,7 @@ body::before{
 
   cursor:pointer;
 
-  font-size:18px;
+  font-size:16px;
 
   color:white;
 
@@ -475,11 +483,13 @@ body::before{
 
   .search-box button{
 
-    width:44px;
+    width:42px;
 
-    height:44px;
+    height:42px;
 
-    font-size:16px;
+    min-width:42px;
+
+    font-size:15px;
   }
 }
 
@@ -503,6 +513,22 @@ body::before{
     transform:
     translateY(-30px)
     scale(1.01);
+  }
+
+  .search-box{
+
+    gap:6px;
+  }
+
+  .search-box button{
+
+    width:40px;
+
+    height:40px;
+
+    min-width:40px;
+
+    font-size:14px;
   }
 
   .container h1{
