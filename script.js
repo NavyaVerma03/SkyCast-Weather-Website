@@ -1,7 +1,7 @@
 const apiKey =
 "820df179b90a47a098181513262405";
 
-// Live Clock
+// ================= LIVE CLOCK =================
 
 setInterval(()=>{
 
@@ -11,7 +11,7 @@ setInterval(()=>{
 
 },1000);
 
-// Main Weather Function
+// ================= MAIN WEATHER FUNCTION =================
 
 async function getWeather(cityName){
 
@@ -44,7 +44,7 @@ async function getWeather(cityName){
       return;
     }
 
-    // Weather Data
+    // ================= WEATHER DATA =================
 
     document.getElementById("cityName")
     .innerHTML =
@@ -74,7 +74,7 @@ async function getWeather(cityName){
     .innerHTML =
     data.current.vis_km + " km";
 
-    // Temperature Color
+    // ================= TEMPERATURE COLOR =================
 
     let temp =
     data.current.temp_c;
@@ -82,28 +82,28 @@ async function getWeather(cityName){
     if(temp >= 35){
 
       document.getElementById("temp")
-      .style.color = "white";
-
+      .style.color = "#ffb347";
     }
 
     else if(temp <= 15){
 
       document.getElementById("temp")
       .style.color = "#00c6ff";
-
     }
 
     else{
 
       document.getElementById("temp")
       .style.color = "#ffffff";
-
     }
 
-    // Weather Logic
+    // ================= WEATHER LOGIC =================
 
     let condition =
     data.current.condition.text.toLowerCase();
+
+    let isDay =
+    data.current.is_day;
 
     let icon =
     document.getElementById("weatherIcon");
@@ -113,35 +113,40 @@ async function getWeather(cityName){
 
     rain.style.opacity = "0";
 
-    // Sunny
+    /* ================= NIGHT ================= */
 
-    if(condition.includes("sunny")){
+    if(isDay === 0){
 
       icon.src =
-      "https://cdn-icons-png.flaticon.com/512/869/869869.png";
+      "https://cdn-icons-png.flaticon.com/512/581/581601.png";
 
       document.body.style.setProperty(
         "--weather-bg",
-        "url('https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=2070&auto=format&fit=crop')"
+        "url('https://images.unsplash.com/photo-1519681393784-d120267933ba?q=80&w=2070&auto=format&fit=crop')"
       );
     }
 
-    // Rain
+    /* ================= RAIN ================= */
 
     else if(condition.includes("rain")){
 
       icon.src =
       "https://cdn-icons-png.flaticon.com/512/414/414974.png";
 
+      rain.style.opacity = "1";
+
       document.body.style.setProperty(
         "--weather-bg",
         "url('https://images.unsplash.com/photo-1428592953211-077101b2021b?q=80&w=2070&auto=format&fit=crop')"
       );
-
     }
-    // Cloud
 
-    else if(condition.includes("cloud")){
+    /* ================= CLOUD ================= */
+
+    else if(
+      condition.includes("cloud") ||
+      condition.includes("overcast")
+    ){
 
       icon.src =
       "https://cdn-icons-png.flaticon.com/512/414/414927.png";
@@ -152,7 +157,23 @@ async function getWeather(cityName){
       );
     }
 
-    // Snow
+    /* ================= SUNNY ================= */
+
+    else if(
+      condition.includes("sunny") ||
+      condition.includes("clear")
+    ){
+
+      icon.src =
+      "https://cdn-icons-png.flaticon.com/512/869/869869.png";
+
+      document.body.style.setProperty(
+        "--weather-bg",
+        "url('https://images.unsplash.com/photo-1504608524841-42fe6f032b4b?q=80&w=2070&auto=format&fit=crop')"
+      );
+    }
+
+    /* ================= SNOW ================= */
 
     else if(condition.includes("snow")){
 
@@ -165,7 +186,7 @@ async function getWeather(cityName){
       );
     }
 
-    // Thunder
+    /* ================= THUNDER ================= */
 
     else if(condition.includes("thunder")){
 
@@ -178,7 +199,7 @@ async function getWeather(cityName){
       );
     }
 
-    // Default
+    /* ================= DEFAULT ================= */
 
     else{
 
@@ -198,11 +219,10 @@ async function getWeather(cityName){
     console.log(error);
 
     alert("Something went wrong");
-
   }
 }
 
-// Enter Key
+// ================= ENTER KEY =================
 
 document.getElementById("city")
 .addEventListener("keypress",
@@ -211,12 +231,10 @@ function(event){
   if(event.key === "Enter"){
 
     getWeather();
-
   }
-
 });
 
-// Location Weather
+// ================= LOCATION WEATHER =================
 
 function getLocationWeather(){
 
@@ -240,10 +258,13 @@ function getLocationWeather(){
       await response.json();
 
       getWeather(data.location.name);
+    },
 
+    ()=>{
+
+      alert("Location access denied");
     }
 
   );
-
 }
 
