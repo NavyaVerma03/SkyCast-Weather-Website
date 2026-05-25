@@ -24,89 +24,94 @@
   rel="stylesheet">
 
 </head>
+
 <body>
 
   <div class="overlay"></div>
 
   <div class="rain"></div>
 
-  <div class="container">
+  <div class="app-wrapper">
 
-    <h1> SkyCast Weather⛅</h1>
+    <div class="container">
 
-    <div class="search-box">
+      <h1>SkyCast Weather⛅</h1>
 
-      <input
-      type="text"
-      id="city"
-      placeholder="Search city...">
+      <div class="search-box">
 
-      <button onclick="getWeather()">
-        🔍
-      </button>
+        <input
+        type="text"
+        id="city"
+        placeholder="Search city...">
 
-      <button onclick="getLocationWeather()">
-        📍
-      </button>
+        <button onclick="getWeather()">
+          🔍
+        </button>
 
-    </div>
-
-    <div class="weather-card">
-
-      <h2 id="cityName">
-        City Name
-      </h2>
-
-      <p id="dateTime">
-        Date & Time
-      </p>
-
-      <img
-      id="weatherIcon"
-      src=""
-      alt="">
-
-      <h1 id="temp">
-        --°C
-      </h1>
-
-      <p id="condition">
-        Weather Condition
-      </p>
-
-      <div class="extra-details">
-
-        <div class="mini-box">
-          <h3>🔥 Feels Like</h3>
-          <span id="feelsLike">--°C</span>
-        </div>
-
-        <div class="mini-box">
-          <h3>👀 Visibility</h3>
-          <span id="visibility">-- km</span>
-        </div>
+        <button onclick="getLocationWeather()">
+          📍
+        </button>
 
       </div>
 
-      <div class="details">
+      <div class="weather-card">
 
-        <div class="box">
+        <h2 id="cityName">
+          City Name
+        </h2>
 
-          <h3>💧Humidity</h3>
+        <p id="dateTime">
+          Date & Time
+        </p>
 
-          <p id="humidity">
-            --%
-          </p>
+        <img
+        id="weatherIcon"
+        src=""
+        alt="">
+
+        <h1 id="temp">
+          --°C
+        </h1>
+
+        <p id="condition">
+          Weather Condition
+        </p>
+
+        <div class="extra-details">
+
+          <div class="mini-box">
+            <h3>🔥 Feels Like</h3>
+            <span id="feelsLike">--°C</span>
+          </div>
+
+          <div class="mini-box">
+            <h3>👀 Visibility</h3>
+            <span id="visibility">-- km</span>
+          </div>
 
         </div>
 
-        <div class="box">
+        <div class="details">
 
-          <h3> 🍃 Wind</h3>
+          <div class="box">
 
-          <p id="wind">
-            -- km/h
-          </p>
+            <h3>💧 Humidity</h3>
+
+            <p id="humidity">
+              --%
+            </p>
+
+          </div>
+
+          <div class="box">
+
+            <h3>🍃 Wind</h3>
+
+            <p id="wind">
+              -- km/h
+            </p>
+
+          </div>
 
         </div>
 
@@ -117,10 +122,10 @@
   </div>
 
   <footer class="footer">
-  <p>SkyCast • Developed by Navya Verma ❤️</p>
-</footer>
+    <p>SkyCast • Developed by Navya Verma ❤️</p>
+  </footer>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 </html>

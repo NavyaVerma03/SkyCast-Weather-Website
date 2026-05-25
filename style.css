@@ -5,31 +5,35 @@
   font-family:"Poppins",sans-serif;
 }
 
+html{
+  font-size:16px;
+  -webkit-text-size-adjust:100%;
+}
+
 body{
 
   --weather-bg:
   url("https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?q=80&w=2070&auto=format&fit=crop");
 
-  height:100vh;
+  min-height:100vh;
 
-  display:flex;
-
-  justify-content:center;
-
-  align-items:center;
-
-  overflow:hidden;
+  overflow-x:hidden;
 
   position:relative;
+
+  color:white;
 }
 
-/* Dynamic Background */
+/* ================= BACKGROUND ================= */
 
 body::before{
 
   content:"";
 
-  position:absolute;
+  position:fixed;
+
+  top:0;
+  left:0;
 
   width:100%;
   height:100%;
@@ -49,7 +53,7 @@ body::before{
 
   animation:bgZoom 20s linear infinite;
 
-  z-index:-2;
+  z-index:-3;
 }
 
 @keyframes bgZoom{
@@ -67,11 +71,14 @@ body::before{
   }
 }
 
-/* Overlay */
+/* ================= OVERLAY ================= */
 
 .overlay{
 
-  position:absolute;
+  position:fixed;
+
+  top:0;
+  left:0;
 
   width:100%;
   height:100%;
@@ -82,14 +89,14 @@ body::before{
     rgba(0,0,0,0.6)
   );
 
-  z-index:-1;
+  z-index:-2;
 }
 
-/* Rain */
+/* ================= RAIN EFFECT ================= */
 
 .rain{
 
-  position:absolute;
+  position:fixed;
 
   top:0;
   left:0;
@@ -97,11 +104,11 @@ body::before{
   width:100%;
   height:100%;
 
-  overflow:hidden;
+  opacity:0;
 
   pointer-events:none;
 
-  opacity:0;
+  overflow:hidden;
 
   z-index:-1;
 }
@@ -113,7 +120,7 @@ body::before{
   position:absolute;
 
   width:100%;
-  height:100%;
+  height:200%;
 
   background-image:
   linear-gradient(
@@ -137,11 +144,30 @@ body::before{
   }
 }
 
-/* Card */
+/* ================= APP WRAPPER ================= */
+
+.app-wrapper{
+
+  width:100%;
+
+  min-height:100vh;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  padding:20px;
+}
+
+/* ================= CONTAINER ================= */
 
 .container{
 
-  width:340px;
+  width:100%;
+
+  max-width:340px;
 
   padding:22px;
 
@@ -158,33 +184,20 @@ body::before{
   box-shadow:
   0 0 40px rgba(0,0,0,0.4);
 
-  color:white;
-
   text-align:center;
 
-  animation:float 5s ease-in-out infinite;
+  transition:0.4s;
 
-  transition:0.5s;
+  transform:translateY(-30px);
+
+  margin:30px 0 160px;
 }
 
 .container:hover{
 
-  transform:scale(1.02);
-}
-
-@keyframes float{
-
-  0%{
-    transform:translateY(0px);
-  }
-
-  50%{
-    transform:translateY(-8px);
-  }
-
-  100%{
-    transform:translateY(0px);
-  }
+  transform:
+  translateY(-30px)
+  scale(1.01);
 }
 
 .container h1{
@@ -194,7 +207,7 @@ body::before{
   margin-bottom:18px;
 }
 
-/* Search */
+/* ================= SEARCH BOX ================= */
 
 .search-box{
 
@@ -208,6 +221,8 @@ body::before{
 .search-box input{
 
   flex:1;
+
+  min-width:0;
 
   padding:12px;
 
@@ -234,6 +249,8 @@ body::before{
 
   width:48px;
 
+  height:48px;
+
   border:none;
 
   border-radius:15px;
@@ -252,6 +269,8 @@ body::before{
   );
 
   transition:0.3s;
+
+  flex-shrink:0;
 }
 
 .search-box button:hover{
@@ -259,7 +278,7 @@ body::before{
   transform:scale(1.08);
 }
 
-/* Weather */
+/* ================= WEATHER ================= */
 
 .weather-card img{
 
@@ -278,7 +297,7 @@ body::before{
   }
 
   50%{
-    transform:translateY(-6px);
+    transform:translateY(-5px);
   }
 
   100%{
@@ -309,44 +328,9 @@ body::before{
   opacity:0.8;
 }
 
-/* Extra Details */
+/* ================= DETAILS ================= */
 
-.extra-details{
-
-  margin-top:16px;
-
-  display:flex;
-
-  gap:10px;
-}
-
-.mini-box{
-
-  flex:1;
-
-  background:
-  rgba(255,255,255,0.1);
-
-  padding:12px;
-
-  border-radius:15px;
-
-  font-size:13px;
-}
-
-.mini-box span{
-
-  display:block;
-
-  margin-top:6px;
-
-  font-size:18px;
-
-  font-weight:bold;
-}
-
-/* Details */
-
+.extra-details,
 .details{
 
   margin-top:16px;
@@ -356,29 +340,31 @@ body::before{
   gap:10px;
 }
 
+.mini-box,
 .box{
 
   flex:1;
+
+  background:
+  rgba(255,255,255,0.1);
 
   padding:14px;
 
   border-radius:15px;
 
-  background:
-  rgba(255,255,255,0.1);
-
-  transition:0.4s;
+  transition:0.3s;
 }
 
+.mini-box:hover,
 .box:hover{
 
-  transform:
-  translateY(-5px);
+  transform:translateY(-4px);
 
   background:
   rgba(255,255,255,0.18);
 }
 
+.mini-box h3,
 .box h3{
 
   font-size:14px;
@@ -386,35 +372,19 @@ body::before{
   margin-bottom:8px;
 }
 
+.mini-box span,
 .box p{
 
-  font-size:16px;
+  font-size:17px;
 
   font-weight:bold;
 }
 
-/* Mobile */
-
-@media(max-width:450px){
-
-  .container{
-
-    width:95%;
-
-    padding:18px;
-  }
-
-  #temp{
-
-    font-size:50px;
-  }
-}
-
-
+/* ================= FOOTER ================= */
 
 .footer{
 
-  position:absolute;
+  position:fixed;
 
   bottom:0;
 
@@ -422,7 +392,7 @@ body::before{
 
   width:100%;
 
-  padding:12px 0;
+  padding:12px;
 
   text-align:center;
 
@@ -437,14 +407,144 @@ body::before{
 
 .footer p{
 
-  color:white;
-
-  font-size:14px;
-
-  letter-spacing:1px;
+  font-size:13px;
 
   opacity:0.9;
 
-  text-shadow:
-  0 0 10px rgba(255,255,255,0.4);
+  letter-spacing:1px;
+}
+
+/* ================= TABLET ================= */
+
+@media(max-width:768px){
+
+  .app-wrapper{
+
+    align-items:flex-start;
+
+    padding:15px;
+  }
+
+  .container{
+
+    max-width:100%;
+
+    width:100%;
+
+    padding:20px;
+
+    border-radius:24px;
+
+    margin-top:25px;
+
+    transform:translateY(-30px);
+  }
+
+  .container:hover{
+
+    transform:
+    translateY(-30px)
+    scale(1.01);
+  }
+
+  .container h1{
+
+    font-size:24px;
+  }
+
+  #temp{
+
+    font-size:50px;
+  }
+
+  .weather-card img{
+
+    width:90px;
+  }
+
+  .details,
+  .extra-details{
+
+    flex-direction:column;
+  }
+
+  .search-box input{
+
+    font-size:13px;
+  }
+
+  .search-box button{
+
+    width:44px;
+
+    height:44px;
+
+    font-size:16px;
+  }
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:480px){
+
+  .container{
+
+    padding:16px;
+
+    border-radius:20px;
+
+    margin-bottom:160px;
+
+    transform:translateY(-30px);
+  }
+
+  .container:hover{
+
+    transform:
+    translateY(-30px)
+    scale(1.01);
+  }
+
+  .container h1{
+
+    font-size:22px;
+  }
+
+  #temp{
+
+    font-size:42px;
+  }
+
+  #condition{
+
+    font-size:15px;
+  }
+
+  .weather-card img{
+
+    width:75px;
+  }
+
+  .mini-box,
+  .box{
+
+    padding:12px;
+  }
+
+  .mini-box h3,
+  .box h3{
+
+    font-size:12px;
+  }
+
+  .mini-box span,
+  .box p{
+
+    font-size:15px;
+  }
+
+  .footer p{
+
+    font-size:11px;
+  }
 }
