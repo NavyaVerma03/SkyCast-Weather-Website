@@ -5,8 +5,10 @@
   font-family:"Poppins",sans-serif;
 }
 
-html{
-  font-size:16px;
+html,
+body{
+  width:100%;
+  overflow-x:hidden;
   -webkit-text-size-adjust:100%;
 }
 
@@ -16,8 +18,6 @@ body{
   url("https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?q=80&w=2070&auto=format&fit=crop");
 
   min-height:100vh;
-
-  overflow-x:hidden;
 
   position:relative;
 
@@ -158,7 +158,9 @@ body::before{
 
   align-items:center;
 
-  padding:20px;
+  padding:20px 14px 120px;
+
+  overflow-x:hidden;
 }
 
 /* ================= CONTAINER ================= */
@@ -167,7 +169,9 @@ body::before{
 
   width:100%;
 
-  max-width:340px;
+  max-width:380px;
+
+  overflow:hidden;
 
   padding:22px;
 
@@ -186,18 +190,12 @@ body::before{
 
   text-align:center;
 
-  transition:0.4s;
-
-  transform:translateY(-30px);
-
-  margin:30px 0 160px;
+  transition:0.3s ease;
 }
 
 .container:hover{
 
-  transform:
-  translateY(-30px)
-  scale(1.01);
+  transform:scale(1.01);
 }
 
 .container h1{
@@ -205,6 +203,8 @@ body::before{
   font-size:28px;
 
   margin-bottom:18px;
+
+  word-break:break-word;
 }
 
 /* ================= SEARCH BOX ================= */
@@ -220,6 +220,8 @@ body::before{
   margin-bottom:18px;
 
   width:100%;
+
+  overflow:hidden;
 }
 
 .search-box input{
@@ -288,9 +290,16 @@ body::before{
 
 /* ================= WEATHER ================= */
 
+.weather-card{
+
+  width:100%;
+}
+
 .weather-card img{
 
   width:110px;
+
+  max-width:100%;
 
   animation:iconFloat 3s ease-in-out infinite;
 
@@ -313,11 +322,20 @@ body::before{
   }
 }
 
+#cityName{
+
+  word-break:break-word;
+
+  font-size:24px;
+}
+
 #temp{
 
   font-size:58px;
 
   font-weight:bold;
+
+  word-break:break-word;
 }
 
 #condition{
@@ -325,6 +343,8 @@ body::before{
   font-size:18px;
 
   margin-top:5px;
+
+  word-break:break-word;
 }
 
 #dateTime{
@@ -334,6 +354,10 @@ body::before{
   font-size:12px;
 
   opacity:0.8;
+
+  line-height:1.5;
+
+  word-break:break-word;
 }
 
 /* ================= DETAILS ================= */
@@ -346,12 +370,16 @@ body::before{
   display:flex;
 
   gap:10px;
+
+  width:100%;
 }
 
 .mini-box,
 .box{
 
   flex:1;
+
+  min-width:0;
 
   background:
   rgba(255,255,255,0.1);
@@ -361,6 +389,8 @@ body::before{
   border-radius:15px;
 
   transition:0.3s;
+
+  overflow:hidden;
 }
 
 .mini-box:hover,
@@ -378,6 +408,8 @@ body::before{
   font-size:14px;
 
   margin-bottom:8px;
+
+  word-break:break-word;
 }
 
 .mini-box span,
@@ -386,6 +418,8 @@ body::before{
   font-size:17px;
 
   font-weight:bold;
+
+  word-break:break-word;
 }
 
 /* ================= FOOTER ================= */
@@ -400,7 +434,7 @@ body::before{
 
   width:100%;
 
-  padding:12px;
+  padding:14px 10px;
 
   text-align:center;
 
@@ -411,6 +445,10 @@ body::before{
 
   border-top:
   1px solid rgba(255,255,255,0.1);
+
+  z-index:999;
+
+  overflow:hidden;
 }
 
 .footer p{
@@ -420,6 +458,10 @@ body::before{
   opacity:0.9;
 
   letter-spacing:1px;
+
+  line-height:1.5;
+
+  word-break:break-word;
 }
 
 /* ================= TABLET ================= */
@@ -430,34 +472,26 @@ body::before{
 
     align-items:flex-start;
 
-    padding:15px;
+    padding:15px 12px 120px;
   }
 
   .container{
 
     max-width:100%;
 
-    width:100%;
-
     padding:20px;
 
     border-radius:24px;
-
-    margin-top:25px;
-
-    transform:translateY(-30px);
-  }
-
-  .container:hover{
-
-    transform:
-    translateY(-30px)
-    scale(1.01);
   }
 
   .container h1{
 
     font-size:24px;
+  }
+
+  #cityName{
+
+    font-size:22px;
   }
 
   #temp{
@@ -497,43 +531,30 @@ body::before{
 
 @media(max-width:480px){
 
+  .app-wrapper{
+
+    padding:12px 10px 130px;
+  }
+
   .container{
+
+    width:100%;
+
+    max-width:100%;
 
     padding:16px;
 
     border-radius:20px;
-
-    margin-bottom:160px;
-
-    transform:translateY(-30px);
-  }
-
-  .container:hover{
-
-    transform:
-    translateY(-30px)
-    scale(1.01);
-  }
-
-  .search-box{
-
-    gap:6px;
-  }
-
-  .search-box button{
-
-    width:40px;
-
-    height:40px;
-
-    min-width:40px;
-
-    font-size:14px;
   }
 
   .container h1{
 
-    font-size:22px;
+    font-size:21px;
+  }
+
+  #cityName{
+
+    font-size:20px;
   }
 
   #temp{
@@ -544,6 +565,11 @@ body::before{
   #condition{
 
     font-size:15px;
+  }
+
+  #dateTime{
+
+    font-size:11px;
   }
 
   .weather-card img{
@@ -567,6 +593,22 @@ body::before{
   .box p{
 
     font-size:15px;
+  }
+
+  .search-box{
+
+    gap:6px;
+  }
+
+  .search-box button{
+
+    width:40px;
+
+    height:40px;
+
+    min-width:40px;
+
+    font-size:14px;
   }
 
   .footer p{

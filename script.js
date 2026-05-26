@@ -1,15 +1,7 @@
 const apiKey =
 "820df179b90a47a098181513262405";
 
-// ================= LIVE CLOCK =================
-
-setInterval(()=>{
-
-  document.getElementById("dateTime")
-  .innerHTML =
-  new Date().toLocaleString();
-
-},1000);
+let localTimeInterval;
 
 // ================= MAIN WEATHER FUNCTION =================
 
@@ -44,11 +36,17 @@ async function getWeather(cityName){
       return;
     }
 
-    // ================= WEATHER DATA =================
+    // ================= LOCATION =================
 
     document.getElementById("cityName")
     .innerHTML =
-    data.location.name;
+    `${data.location.name}, ${data.location.region}, ${data.location.country}`;
+
+    // ================= LOCAL TIME =================
+
+    updateLocalTime(data.location.localtime);
+
+    // ================= WEATHER DATA =================
 
     document.getElementById("temp")
     .innerHTML =
@@ -222,6 +220,32 @@ async function getWeather(cityName){
   }
 }
 
+// ================= LIVE LOCAL TIME =================
+
+function updateLocalTime(localtime){
+
+  clearInterval(localTimeInterval);
+
+  let currentTime =
+  new Date(localtime);
+
+  function updateClock(){
+
+    currentTime.setSeconds(
+      currentTime.getSeconds() + 1
+    );
+
+    document.getElementById("dateTime")
+    .innerHTML =
+    `🕒 ${currentTime.toLocaleString()}`;
+  }
+
+  updateClock();
+
+  localTimeInterval =
+  setInterval(updateClock,1000);
+}
+
 // ================= ENTER KEY =================
 
 document.getElementById("city")
@@ -257,7 +281,7 @@ function getLocationWeather(){
       let data =
       await response.json();
 
-      getWeather(data.location.name);
+      getWeather(`${lat},${lon}`);
     },
 
     ()=>{
