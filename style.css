@@ -158,7 +158,7 @@ body::before{
 
   align-items:center;
 
-  padding:20px 15px 110px;
+  padding:20px;
 }
 
 /* ================= CONTAINER ================= */
@@ -167,7 +167,7 @@ body::before{
 
   width:100%;
 
-  max-width:380px;
+  max-width:340px;
 
   padding:22px;
 
@@ -186,12 +186,18 @@ body::before{
 
   text-align:center;
 
-  transition:0.3s ease;
+  transition:0.4s;
+
+  transform:translateY(-30px);
+
+  margin:30px 0 160px;
 }
 
 .container:hover{
 
-  transform:scale(1.01);
+  transform:
+  translateY(-30px)
+  scale(1.01);
 }
 
 .container h1{
@@ -328,8 +334,6 @@ body::before{
   font-size:12px;
 
   opacity:0.8;
-
-  line-height:1.5;
 }
 
 /* ================= DETAILS ================= */
@@ -396,7 +400,7 @@ body::before{
 
   width:100%;
 
-  padding:14px 10px;
+  padding:12px;
 
   text-align:center;
 
@@ -407,8 +411,6 @@ body::before{
 
   border-top:
   1px solid rgba(255,255,255,0.1);
-
-  z-index:999;
 }
 
 .footer p{
@@ -418,8 +420,6 @@ body::before{
   opacity:0.9;
 
   letter-spacing:1px;
-
-  line-height:1.5;
 }
 
 /* ================= TABLET ================= */
@@ -430,16 +430,29 @@ body::before{
 
     align-items:flex-start;
 
-    padding:15px 15px 120px;
+    padding:15px;
   }
 
   .container{
 
     max-width:100%;
 
+    width:100%;
+
     padding:20px;
 
     border-radius:24px;
+
+    margin-top:25px;
+
+    transform:translateY(-30px);
+  }
+
+  .container:hover{
+
+    transform:
+    translateY(-30px)
+    scale(1.01);
   }
 
   .container h1{
@@ -484,18 +497,38 @@ body::before{
 
 @media(max-width:480px){
 
-  .app-wrapper{
-
-    padding:12px 12px 130px;
-  }
-
   .container{
-
-    width:100%;
 
     padding:16px;
 
     border-radius:20px;
+
+    margin-bottom:160px;
+
+    transform:translateY(-30px);
+  }
+
+  .container:hover{
+
+    transform:
+    translateY(-30px)
+    scale(1.01);
+  }
+
+  .search-box{
+
+    gap:6px;
+  }
+
+  .search-box button{
+
+    width:40px;
+
+    height:40px;
+
+    min-width:40px;
+
+    font-size:14px;
   }
 
   .container h1{
@@ -511,11 +544,6 @@ body::before{
   #condition{
 
     font-size:15px;
-  }
-
-  #dateTime{
-
-    font-size:11px;
   }
 
   .weather-card img{
@@ -539,22 +567,6 @@ body::before{
   .box p{
 
     font-size:15px;
-  }
-
-  .search-box{
-
-    gap:6px;
-  }
-
-  .search-box button{
-
-    width:40px;
-
-    height:40px;
-
-    min-width:40px;
-
-    font-size:14px;
   }
 
   .footer p{
