@@ -5,8 +5,10 @@
   font-family:"Poppins",sans-serif;
 }
 
-html{
-  font-size:16px;
+html,
+body{
+  width:100%;
+  overflow-x:hidden;
   -webkit-text-size-adjust:100%;
 }
 
@@ -16,8 +18,6 @@ body{
   url("https://images.unsplash.com/photo-1501630834273-4b5604d2ee31?q=80&w=2070&auto=format&fit=crop");
 
   min-height:100vh;
-
-  overflow-x:hidden;
 
   position:relative;
 
@@ -158,7 +158,9 @@ body::before{
 
   align-items:center;
 
-  padding:20px;
+  padding:35px 12px 120px;
+
+  overflow-x:hidden;
 }
 
 /* ================= CONTAINER ================= */
@@ -167,11 +169,13 @@ body::before{
 
   width:100%;
 
-  max-width:340px;
+  max-width:360px;
+
+  overflow:hidden;
 
   padding:22px;
 
-  border-radius:28px;
+  border-radius:26px;
 
   background:
   rgba(255,255,255,0.08);
@@ -186,25 +190,21 @@ body::before{
 
   text-align:center;
 
-  transition:0.4s;
-
-  transform:translateY(-30px);
-
-  margin:30px 0 160px;
+  transition:0.3s ease;
 }
 
 .container:hover{
 
-  transform:
-  translateY(-30px)
-  scale(1.01);
+  transform:scale(1.01);
 }
 
 .container h1{
 
-  font-size:28px;
+  font-size:25px;
 
-  margin-bottom:18px;
+  margin-bottom:22px;
+
+  word-break:break-word;
 }
 
 /* ================= SEARCH BOX ================= */
@@ -217,9 +217,11 @@ body::before{
 
   gap:8px;
 
-  margin-bottom:18px;
+  margin-bottom:22px;
 
   width:100%;
+
+  overflow:hidden;
 }
 
 .search-box input{
@@ -253,19 +255,19 @@ body::before{
 
 .search-box button{
 
-  width:45px;
+  width:42px;
 
-  height:45px;
+  height:42px;
 
-  min-width:45px;
+  min-width:42px;
 
   border:none;
 
-  border-radius:15px;
+  border-radius:14px;
 
   cursor:pointer;
 
-  font-size:16px;
+  font-size:15px;
 
   color:white;
 
@@ -283,14 +285,23 @@ body::before{
 
 .search-box button:hover{
 
-  transform:scale(1.08);
+  transform:scale(1.05);
 }
 
 /* ================= WEATHER ================= */
 
+.weather-card{
+
+  width:100%;
+}
+
 .weather-card img{
 
-  width:110px;
+  width:90px;
+
+  max-width:100%;
+
+  margin-top:8px;
 
   animation:iconFloat 3s ease-in-out infinite;
 
@@ -313,27 +324,46 @@ body::before{
   }
 }
 
+#cityName{
+
+  font-size:22px;
+
+  margin-top:8px;
+
+  word-break:break-word;
+}
+
 #temp{
 
-  font-size:58px;
+  font-size:50px;
 
   font-weight:bold;
+
+  line-height:1;
+
+  margin-top:6px;
 }
 
 #condition{
 
-  font-size:18px;
+  font-size:15px;
 
-  margin-top:5px;
+  margin-top:4px;
+
+  word-break:break-word;
 }
 
 #dateTime{
 
-  margin-top:5px;
+  margin-top:4px;
 
-  font-size:12px;
+  font-size:11px;
 
   opacity:0.8;
+
+  line-height:1.4;
+
+  word-break:break-word;
 }
 
 /* ================= DETAILS ================= */
@@ -341,11 +371,13 @@ body::before{
 .extra-details,
 .details{
 
-  margin-top:16px;
+  margin-top:14px;
 
   display:flex;
 
-  gap:10px;
+  gap:8px;
+
+  width:100%;
 }
 
 .mini-box,
@@ -353,20 +385,24 @@ body::before{
 
   flex:1;
 
+  min-width:0;
+
   background:
   rgba(255,255,255,0.1);
 
-  padding:14px;
+  padding:12px;
 
-  border-radius:15px;
+  border-radius:14px;
 
   transition:0.3s;
+
+  overflow:hidden;
 }
 
 .mini-box:hover,
 .box:hover{
 
-  transform:translateY(-4px);
+  transform:translateY(-3px);
 
   background:
   rgba(255,255,255,0.18);
@@ -375,17 +411,21 @@ body::before{
 .mini-box h3,
 .box h3{
 
-  font-size:14px;
+  font-size:12px;
 
-  margin-bottom:8px;
+  margin-bottom:6px;
+
+  word-break:break-word;
 }
 
 .mini-box span,
 .box p{
 
-  font-size:17px;
+  font-size:15px;
 
   font-weight:bold;
+
+  word-break:break-word;
 }
 
 /* ================= FOOTER ================= */
@@ -400,7 +440,7 @@ body::before{
 
   width:100%;
 
-  padding:12px;
+  padding:12px 8px;
 
   text-align:center;
 
@@ -411,15 +451,23 @@ body::before{
 
   border-top:
   1px solid rgba(255,255,255,0.1);
+
+  z-index:999;
+
+  overflow:hidden;
 }
 
 .footer p{
 
-  font-size:13px;
+  font-size:11px;
 
   opacity:0.9;
 
   letter-spacing:1px;
+
+  line-height:1.5;
+
+  word-break:break-word;
 }
 
 /* ================= TABLET ================= */
@@ -430,44 +478,7 @@ body::before{
 
     align-items:flex-start;
 
-    padding:15px;
-  }
-
-  .container{
-
-    max-width:100%;
-
-    width:100%;
-
-    padding:20px;
-
-    border-radius:24px;
-
-    margin-top:25px;
-
-    transform:translateY(-30px);
-  }
-
-  .container:hover{
-
-    transform:
-    translateY(-30px)
-    scale(1.01);
-  }
-
-  .container h1{
-
-    font-size:24px;
-  }
-
-  #temp{
-
-    font-size:50px;
-  }
-
-  .weather-card img{
-
-    width:90px;
+    padding:30px 12px 120px;
   }
 
   .details,
@@ -476,20 +487,9 @@ body::before{
     flex-direction:column;
   }
 
-  .search-box input{
+  .container{
 
-    font-size:13px;
-  }
-
-  .search-box button{
-
-    width:42px;
-
-    height:42px;
-
-    min-width:42px;
-
-    font-size:15px;
+    max-width:100%;
   }
 }
 
@@ -497,43 +497,30 @@ body::before{
 
 @media(max-width:480px){
 
+  .app-wrapper{
+
+    padding:28px 10px 120px;
+  }
+
   .container{
 
-    padding:16px;
+    max-width:100%;
 
-    border-radius:20px;
+    padding:18px;
 
-    margin-bottom:160px;
-
-    transform:translateY(-30px);
-  }
-
-  .container:hover{
-
-    transform:
-    translateY(-30px)
-    scale(1.01);
-  }
-
-  .search-box{
-
-    gap:6px;
-  }
-
-  .search-box button{
-
-    width:40px;
-
-    height:40px;
-
-    min-width:40px;
-
-    font-size:14px;
+    border-radius:22px;
   }
 
   .container h1{
 
     font-size:22px;
+
+    margin-bottom:20px;
+  }
+
+  #cityName{
+
+    font-size:19px;
   }
 
   #temp{
@@ -543,34 +530,55 @@ body::before{
 
   #condition{
 
-    font-size:15px;
+    font-size:14px;
+  }
+
+  #dateTime{
+
+    font-size:10px;
   }
 
   .weather-card img{
 
-    width:75px;
+    width:72px;
   }
 
   .mini-box,
   .box{
 
-    padding:12px;
+    padding:10px;
   }
 
   .mini-box h3,
   .box h3{
 
-    font-size:12px;
+    font-size:11px;
   }
 
   .mini-box span,
   .box p{
 
-    font-size:15px;
+    font-size:14px;
+  }
+
+  .search-box{
+
+    gap:6px;
+  }
+
+  .search-box button{
+
+    width:38px;
+
+    height:38px;
+
+    min-width:38px;
+
+    font-size:13px;
   }
 
   .footer p{
 
-    font-size:11px;
+    font-size:10px;
   }
 }
