@@ -106,10 +106,7 @@ async function getWeather(cityName){
     let icon =
     document.getElementById("weatherIcon");
 
-    let rain =
-    document.querySelector(".rain");
-
-    rain.style.opacity = "0";
+    
 
     /* ================= NIGHT ================= */
 
@@ -126,18 +123,7 @@ async function getWeather(cityName){
 
     /* ================= RAIN ================= */
 
-    else if(condition.includes("rain")){
-
-      icon.src =
-      "https://cdn-icons-png.flaticon.com/512/414/414974.png";
-
-      rain.style.opacity = "1";
-
-      document.body.style.setProperty(
-        "--weather-bg",
-        "url('https://images.unsplash.com/photo-1428592953211-077101b2021b?q=80&w=2070&auto=format&fit=crop')"
-      );
-    }
+    
 
     /* ================= CLOUD ================= */
 
@@ -226,26 +212,18 @@ function updateLocalTime(localtime){
 
   clearInterval(localTimeInterval);
 
-  let currentTime =
-  new Date(localtime);
-
   function updateClock(){
 
-    currentTime.setSeconds(
-      currentTime.getSeconds() + 1
-    );
+    const now = new Date();
 
-    document.getElementById("dateTime")
-    .innerHTML =
-    `🕒 ${currentTime.toLocaleString()}`;
+    document.getElementById("dateTime").innerHTML =
+      "🕒 " + now.toLocaleString();
   }
 
   updateClock();
 
-  localTimeInterval =
-  setInterval(updateClock,1000);
+  localTimeInterval = setInterval(updateClock, 1000);
 }
-
 // ================= ENTER KEY =================
 
 document.getElementById("city")
