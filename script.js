@@ -72,7 +72,7 @@ async function getWeather(cityName){
     .innerHTML =
     data.current.vis_km + " km";
 
-    // ================= TEMPERATURE COLOR =================
+    // ================= TEMPERATURE  =================
 
     let temp =
     data.current.temp_c;
@@ -121,7 +121,6 @@ async function getWeather(cityName){
       );
     }
 
-    /* ================= RAIN ================= */
 
     
 
